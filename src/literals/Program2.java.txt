@@ -1,7 +1,0 @@
-package literals; // To informuje Javę, że plik jest w folderze literals
-
-public class Program2 {
-    public static void main(String[] args) {
-        System.out.println("To jest szkielet zadania 2");
-    }
-}
