@@ -12,7 +12,8 @@ Here is a list of completed tasks and exercises. I update this table regularly a
 | :--- | :--- | :--- | :--- |
 | **01** | [`LiteralsExercise.java`](./src/literals/LiteralsExercise.java) | **Java Literals**<br>Demonstration of various data representations: integers (binary, hex), floating-points, booleans, and characters (Unicode). | `char`, `\uXXXX` (Unicode), `0b` (Binary), `0x` (Hex) |
 | **02** | [`NumberUtils.java`](./src/literals/NumberUtils.java) | **Even or Odd Check**<br>Algorithm that generates a random number and checks its parity using the modulo operator. | `Random`, `if-else`, Modulo `%`, `Clean Code` |
-| **03** | *Coming Soon* | **Future Task**<br>Description of the next challenge. | ... |
+| **03** | [`NarcissisticNumber.java`](./src/literals/NarcissisticNumber.java) | **Narcissistic Number**<br>Algorithm checks if a number equals the sum of its digits raised to the power of digit count. | `while`, `Math.pow`, Casting `(int)`, Algorithmics |
+| **04** | *Coming Soon* | **Future Task**<br>Description of the next challenge. | ... |
 
 *(Note: Click on the File Name to view the source code)*
 
