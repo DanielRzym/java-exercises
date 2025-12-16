@@ -1,4 +1,4 @@
-public class Main { // Wrapped in a class for standard compatibility
+public class LiteralsExercise { // Wrapped in a class for standard compatibility
 
     public static void main(String[] args) {
 
