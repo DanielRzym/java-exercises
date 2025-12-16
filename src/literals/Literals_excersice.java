@@ -1,59 +1,61 @@
-void main() {
+public class Main { // Wrapped in a class for standard compatibility
 
-/**
- * Task I: Demonstration of basic Java literals.
- *
- * This program outputs:
- * - All boolean literals (true/false).
- * - The same integer value represented in decimal, octal, hexadecimal, and binary formats.
- * - Real number literals (floating-point).
- * - Character literals, including one encoded using UTF-16.
- *
- * @author Daniel Rzymański
- */
+    public static void main(String[] args) {
 
-    // 1. All boolean literals
-    System.out.println("--- Boolean Literals ---");
-    System.out.println(true + "\n" + false);
+        /**
+         * Task I: Demonstration of basic Java literals.
+         * @author Daniel Rzymański
+         */
 
-    // 2. The same integer value represented in different formats
-    byte example = 127; // 0111 1111
-    System.out.println("--- Integer Literals ---");
-    System.out.println("Decimal: " + example);
-    System.out.println("Octal: 0_177 = " + 0_177);
-    System.out.println("Hexadecimal: 0x7F = " + 0x7F);
-    System.out.println("Binary: 0b1111111 = " + 0b1111111);
+        // --- 1. Boolean Literals ---
+        System.out.println("--- Boolean Literals ---");
+        System.out.println(true + "\n" + false);
 
-    // 3. Real number literals (floating-point)
+        // --- 2. Integer Literals ---
+        // Showing 127 in different formats
+        System.out.println("\n--- Integer Literals ---");
+        byte example = 127;
+        System.out.println("Decimal: " + example);
+        System.out.println("Octal: 0_177 = " + 0_177);      // Prefix 0
+        System.out.println("Hexadecimal: 0x7F = " + 0x7F);  // Prefix 0x
+        System.out.println("Binary: 0b1111111 = " + 0b1111111); // Prefix 0b
 
-    //DecimalFloatingPointLiterals
-    System.out.println("--- Decimal Floating Point Literals ---");
-    float DecFloatingPontLiteral_1 = 1.111e+1f;
-    float DecFloatingPontLiteral_2 = .11e-11F;
-    double DecFloatingPontLiteral_3 = 111e+1d;
-    double DecFloatingPontLiteral_4 = 111E1D;
-    System.out.println("1. " + DecFloatingPontLiteral_1 +
-            "\n2. " + DecFloatingPontLiteral_2 +
-            "\n3. " + DecFloatingPontLiteral_3 +
-            "\n4. " + DecFloatingPontLiteral_4);
-    //HexadecimalFloatingPointLiteral
-    System.out.println("--- Hexadecimal Floating Point Literals ---");
-    float HexFloatingPontLiteral_1 = 0xF.Fp1f;
-    double  HexFloatingPontLiteral_2 = 0XF.FP1D;
-    System.out.println("1. " + HexFloatingPontLiteral_1 +
-            "\n2. " + HexFloatingPontLiteral_2);
+        // --- 3. Real Number Literals ---
 
-    // 4. Character literals, including one encoded using UTF-16
+        System.out.println("\n--- Decimal Floating Point Literals ---");
+        // Variables renamed to camelCase and fixed typos
+        float decPointLiteral1 = 1.111e+1f;
+        float decPointLiteral2 = .11e-11F;
+        double decPointLiteral3 = 111e+1d;
+        double decPointLiteral4 = 111E1D;
 
-    //Character Literal
-    char CharExample = 'A';
-    char CharExample2 = '\n';
-    char CharExample3 = '\uD83D';
-    char CharExample4 = '\uDE80';
-    System.out.println("1. and 2. " + CharExample + CharExample2);
-    System.out.println("3. and 4. " +  CharExample3 +  CharExample4);
+        System.out.println("1. " + decPointLiteral1 +
+                "\n2. " + decPointLiteral2 +
+                "\n3. " + decPointLiteral3 +
+                "\n4. " + decPointLiteral4);
 
+        System.out.println("\n--- Hexadecimal Floating Point Literals ---");
+        // Hex floats: 0x[Integer].[Fraction]p[Exponent]
+        float hexPointLiteral1 = 0xF.Fp1f;
+        double hexPointLiteral2 = 0XF.FP1D;
 
+        System.out.println("1. " + hexPointLiteral1 +
+                "\n2. " + hexPointLiteral2);
 
+        // --- 4. Character Literals ---
 
+        System.out.println("\n--- Character Literals ---");
+        char charA = 'A';
+        char charNewline = '\n';
+
+        // Surrogate pair for Rocket Emoji 🚀
+        char highSurrogate = '\uD83D';
+        char lowSurrogate = '\uDE80';
+
+        // Using replace("\n", "\\n") just so we can see the symbol in the console output
+        System.out.println("Standard: " + charA + " and Newline (hidden)");
+
+        // Concatenating high and low surrogates creates the emoji
+        System.out.println("Unicode Pair: " + highSurrogate + lowSurrogate);
+    }
 }
