@@ -48,14 +48,14 @@ public class Main { // Wrapped in a class for standard compatibility
         char charA = 'A';
         char charNewline = '\n';
 
-        // Surrogate pair for Rocket Emoji 🚀
+        // Surrogate pair for Rocket Emoji 
         char highSurrogate = '\uD83D';
         char lowSurrogate = '\uDE80';
 
-        // Using replace("\n", "\\n") just so we can see the symbol in the console output
+        // Using replace("\n", "\\n") 
         System.out.println("Standard: " + charA + " and Newline (hidden)");
 
-        // Concatenating high and low surrogates creates the emoji
+        // Concatenating high and low surrogates 
         System.out.println("Unicode Pair: " + highSurrogate + lowSurrogate);
     }
 }
